@@ -4,5 +4,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://uncompa.github.io',
-  base: '/aaron-vargas/',
+  base: '/aaron-vargas',
 });
