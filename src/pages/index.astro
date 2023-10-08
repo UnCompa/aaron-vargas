@@ -1,0 +1,46 @@
+---
+import Layout from "./../layout/Layout.astro";
+import Header from "./../components/Header.astro";
+import Info from "./../components/Info.astro";
+import Intereses from "./../components/Intereses.astro";
+import Imagen from "./../../public/space.jpg";
+import Card from "./../components/Card.astro";
+
+import Footer from "../components/Footer.astro";
+import GustosBox from "../components/GustosBox.astro";
+import Habilidades from "../components/Habilidades.astro";
+---
+
+<Layout>
+  <Header />
+  <div class="w-full relative h-caja">
+    <img
+      class="absolute h-caja w-full object-cover object-top"
+      src="/taekwondo.jpg"
+    />
+    <div class="h-caja w-full bg-yellow-600 opacity-30"></div>
+  </div>
+  <main class="container mx-auto grid grid-cols-layout place-items-center h-full relative font-poppins">
+        <div class="relative -top-32 col-span-3">
+          <div
+            class="bg-white relative w-circulo h-circulo col-start-2 rounded-full"
+          >
+            <img class="h-full w-full rounded-full p-2" src="/space.jpg" alt="" />
+          </div>
+          <h2 class="w-full text-4xl col-start-3 text-center relative top-16">
+            Aaron Vargas
+          </h2>
+        </div>
+        <p class="w-full text-xl text-center col-start-2">
+          Un chico que se va a convertir en hombre que tiene 16 años y ama hacer
+          deporte donde se especializa en el Taekwondo siendo muy en esta
+          disiciplina deportiva, ama los gatos y dejo de jugar basketball. Además es
+          una persona que se fuga mucho de su colegio para ver a sus seres queridos.
+        </p>
+	    <Info/>
+      <GustosBox/>
+	    <Intereses/>
+      <Habilidades/>
+    </main>
+  <Footer/>
+</Layout>

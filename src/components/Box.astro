@@ -1,0 +1,19 @@
+---
+interface Props {
+    content: string,
+    animation: string
+}
+const {content, animation} = Astro.props
+---
+<div class=`card ${animation} opacity-0 my-8 text-white text-2xl flex items-center justify-center`>{content}</div>
+<style>
+  .card {
+    width: 100%;
+    height: 4rem;
+    border-radius: 30px;
+    background: #3366ff;
+    box-shadow:
+      10px 10px 30px #6699ff,
+      -10px -10px 30px #1199ff;
+  }
+</style>
