@@ -5,15 +5,13 @@ interface Props {
 }
 const {content, animation} = Astro.props
 ---
-<div class=`card ${animation} opacity-0 my-8 text-white text-2xl flex items-center justify-center`>{content}</div>
+<div class=`card ${animation} opacity-0 my-8 text-white text-2xl flex items-center justify-center shadow-xl shadow-blue-300`>{content}</div>
 <style>
   .card {
-    width: 100%;
+    min-width: 100%;
+    max-width: 500px;
     height: 4rem;
     border-radius: 30px;
     background: #3366ff;
-    box-shadow:
-      10px 10px 30px #6699ff,
-      -10px -10px 30px #1199ff;
   }
 </style>

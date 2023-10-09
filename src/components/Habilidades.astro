@@ -1,1 +1,68 @@
-<h2 class="w-full text-3xl col-start-2 text-center relative my-8 border-b-4 border-yellow-500 py-4">Intereses</h2>
+---
+import Card from "./CardH.astro";
+import ProgressBar from "./ProgressBar.astro";
+---
+
+<h2
+  class="w-full text-3xl col-start-2 text-center relative my-8 border-b-4 border-red-500 py-4"
+>
+  Habilidades
+</h2>
+<section
+  class="col-start-2 w-full grid sm:grid-cols-1 sm:grid-rows-2 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-0 lg:gap-10 h-full"
+>
+  <article class="row-span-2">
+    <div class="row-span-1 flex items-center justify-evenly w-full">
+      <Card
+        text="Prueba"
+        text2="25%"
+        color1="from-blue-300"
+        color2="to-cyan-300"
+      />
+    </div>
+    <div class="row-span-1 my-8">
+      <ProgressBar
+        color1="bg-blue-100"
+        color2="from-blue-800"
+        color3="to-cyan-500"
+        animation="animate-load-2"
+      />
+    </div>
+  </article>
+  <article class="row-span-2">
+    <div class="row-span-1 flex items-center justify-evenly w-full">
+      <Card
+        text="Prueba"
+        text2="100%"
+        color1="from-rose-300"
+        color2="to-red-300"
+      />
+    </div>
+    <div class="row-span-1 my-8">
+        <ProgressBar
+        color1="bg-blue-100"
+        color2="from-rose-800"
+        color3="to-red-500"
+        animation="animate-load-4"
+      />
+    </div>
+  </article>
+  <article class="row-span-2">
+    <div class="row-span-1 flex items-center justify-evenly w-full">
+      <Card
+        text="Prueba"
+        text2="75%"
+        color1="from-green-300"
+        color2="to-green-300"
+      />
+    </div>
+    <div class="row-span-1 my-8">
+        <ProgressBar
+        color1="bg-blue-100"
+        color2="from-green-800"
+        color3="to-green-500"
+        animation="animate-load-3"
+      />
+    </div>
+  </article>
+</section>

@@ -1,6 +1,6 @@
 ---
 import Layout from "./../layout/Layout.astro";
-import Header from "./../components/Header.astro";
+import Header from "./../components/Header.jsx";
 import Info from "./../components/Info.astro";
 import Intereses from "./../components/Intereses.astro";
 import Footer from "../components/Footer.astro";
@@ -9,35 +9,41 @@ import Habilidades from "../components/Habilidades.astro";
 ---
 
 <Layout>
-  <Header />
-  <div class="w-full relative h-caja">
+  <Header client:load />
+  <div class="w-full relative h-caja animate-over">
     <img
-      class="absolute h-caja w-full object-cover object-top"
+      class="absolute h-caja w-full object-cover object-top -z-20"
       src="/aaron-vargas/taekwondo.jpg"
     />
-    <div class="h-caja w-full bg-yellow-600 opacity-30"></div>
+    <div class="h-caja w-full bg-gradient-to-t from-yellow-300 to-black opacity-50 absolute -z-10 bg-fixed"></div>
   </div>
-  <main class="container mx-auto grid grid-cols-layout place-items-center h-full relative font-poppins">
-        <div class="relative -top-32 col-span-3">
-          <div
-            class="bg-white relative w-circulo h-circulo col-start-2 rounded-full"
-          >
-            <img class="h-full w-full rounded-full p-2" src="/aaron-vargas/space.jpg" alt="" />
-          </div>
-          <h2 class="w-full text-4xl col-start-3 text-center relative top-16">
-            Aaron Vargas
-          </h2>
-        </div>
-        <p class="w-full text-xl text-center col-start-2">
-          Un chico que se va a convertir en hombre que tiene 16 años y ama hacer
-          deporte donde se especializa en el Taekwondo siendo muy en esta
-          disiciplina deportiva, ama los gatos y dejo de jugar basketball. Además es
-          una persona que se fuga mucho de su colegio para ver a sus seres queridos.
-        </p>
-	    <Info/>
-      <GustosBox/>
-	    <Intereses/>
-      <Habilidades/>
-    </main>
-  <Footer/>
+  <main
+    class="container mx-auto grid grid-cols-layout place-items-center h-full relative font-poppins"
+  >
+    <div class="relative -top-32 col-span-3">
+      <div
+        class="bg-white relative w-circulo h-circulo col-start-2 rounded-full"
+      >
+        <img
+          class="h-full w-full rounded-full p-2"
+          src="/aaron-vargas/space.jpg"
+          alt=""
+        />
+      </div>
+      <h2 class="w-full text-4xl col-start-3 text-center relative top-16 text-white bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 p-4 font-extrabold">
+        Aaron Vargas
+      </h2>
+    </div>
+    <p class="w-full text-xl text-center col-start-2">
+      Un chico que se va a convertir en hombre que tiene 16 años y ama hacer
+      deporte donde se especializa en el Taekwondo siendo muy en esta
+      disiciplina deportiva, ama los gatos y dejo de jugar basketball. Además es
+      una persona que se fuga mucho de su colegio para ver a sus seres queridos.
+    </p>
+    <Info />
+    <GustosBox />
+    <Intereses />
+    <Habilidades />
+  </main>
+  <Footer />
 </Layout>
