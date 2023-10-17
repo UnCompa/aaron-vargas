@@ -8,7 +8,7 @@ export default function Header() {
         setIcon(!icon)
     }
   return (
-    <header class="h-16 w-full flex lg:justify-between items-center shadow-lg sticky top-0 z-20 bg-white lg:bg-slate-900">
+    <header class="h-16 w-full flex lg:justify-between items-center shadow-lg sticky top-0 z-20 bg-slate-900">
     <div onClick={handleClick} class="text-3xl h-full w-20 bg-slate-900 flex items-center justify-center lg:hidden">
         {icon 
             ? <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
